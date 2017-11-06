@@ -1,0 +1,132 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@ico-01-name: 'ico-01';
+@ico-01-x: 0px;
+@ico-01-y: 408px;
+@ico-01-offset-x: 0px;
+@ico-01-offset-y: -408px;
+@ico-01-width: 66px;
+@ico-01-height: 54px;
+@ico-01-total-width: 462px;
+@ico-01-total-height: 462px;
+@ico-01-image: '../img/userfiles/sprite_main.png';
+@ico-01: 0px 408px 0px -408px 66px 54px 462px 462px '../img/userfiles/sprite_main.png' 'ico-01';
+@ico-02-name: 'ico-02';
+@ico-02-x: 398px;
+@ico-02-y: 0px;
+@ico-02-offset-x: -398px;
+@ico-02-offset-y: 0px;
+@ico-02-width: 64px;
+@ico-02-height: 64px;
+@ico-02-total-width: 462px;
+@ico-02-total-height: 462px;
+@ico-02-image: '../img/userfiles/sprite_main.png';
+@ico-02: 398px 0px -398px 0px 64px 64px 462px 462px '../img/userfiles/sprite_main.png' 'ico-02';
+@ico-03-name: 'ico-03';
+@ico-03-x: 398px;
+@ico-03-y: 66px;
+@ico-03-offset-x: -398px;
+@ico-03-offset-y: -66px;
+@ico-03-width: 43px;
+@ico-03-height: 68px;
+@ico-03-total-width: 462px;
+@ico-03-total-height: 462px;
+@ico-03-image: '../img/userfiles/sprite_main.png';
+@ico-03: 398px 66px -398px -66px 43px 68px 462px 462px '../img/userfiles/sprite_main.png' 'ico-03';
+@ico-bg01-name: 'ico-bg01';
+@ico-bg01-x: 0px;
+@ico-bg01-y: 0px;
+@ico-bg01-offset-x: 0px;
+@ico-bg01-offset-y: 0px;
+@ico-bg01-width: 396px;
+@ico-bg01-height: 406px;
+@ico-bg01-total-width: 462px;
+@ico-bg01-total-height: 462px;
+@ico-bg01-image: '../img/userfiles/sprite_main.png';
+@ico-bg01: 0px 0px 0px 0px 396px 406px 462px 462px '../img/userfiles/sprite_main.png' 'ico-bg01';
+@spritesheet-width: 462px;
+@spritesheet-height: 462px;
+@spritesheet-image: '../img/userfiles/sprite_main.png';
+@spritesheet-sprites: @ico-01 @ico-02 @ico-03 @ico-bg01;
+@spritesheet: 462px 462px '../img/userfiles/sprite_main.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

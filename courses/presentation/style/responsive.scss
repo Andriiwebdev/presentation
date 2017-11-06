@@ -1,0 +1,710 @@
+@media screen and (max-width:1600px) {
+    .banner {
+        &__subtitle {
+            top: 22vw;
+            left: 26.5vw;
+        }
+    }
+    .speakers {
+        &__item {
+            &:nth-child(2n+2) {
+                .speakers_name {
+                    width: 65%;
+                }
+                .speakers__item__text {
+                    width: 65%;
+                }
+                .speakers__item__sub {
+                    width: 65%;
+                }
+            }
+            &__sub {
+                width: 65%;
+            }
+            &__text {
+                width: 65%;
+            }
+        }
+        &_name {
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width:1336px) {
+    .banner {
+        &__subtitle {
+            font-size: 26px;
+            left: 27.5vw;
+            &::before {
+                top: 11px;
+            }
+        }
+        &__title {
+            width: 28vw;
+            top: 29vw;
+        }
+        &__date {
+            font-size: 36px;
+        }
+    }
+    .section-title {
+        font-size: 30px;
+        &::before {
+            bottom: -50px;
+        }
+        &::after {
+            bottom: -55px;
+        }
+    }
+    .video__content {
+        width: 74vw;
+        margin-top: 13%;
+    }
+    .about {
+        min-height: 730px;
+        .section-title {
+            margin-top: 95px;
+            padding-top: 62px;
+        }
+        &__description {
+            margin-top: 73px;
+            margin: 73px 20px 0;
+            font-size: 20px;
+            line-height: 35px;
+        }
+        &__left__text, &__right__text {
+            font-size: 21px;
+            line-height: 27px;
+            top: 87%;
+        }
+        &__col {
+            min-height: 270px;
+        }
+    }
+    .schedule {
+        .container {
+            margin: 0 auto;
+            padding: 9vw 15px 0;
+        }
+        .title_number {
+            font-size: 63px;
+        }
+        &__col {
+            height: 298px;
+            &__title {
+                font-size: 28px;
+            }
+            &__text {
+                font-size: 17px;
+                margin-top: 5px;
+                line-height: 30px;
+            }
+            &__date {
+                font-size: 32.5px;
+            }
+            &:nth-child(1n+4) {
+                height: 327px;
+            }
+
+        }
+    }
+    .speakers {
+        &__description {
+            font-size: 20px;
+            line-height: 35px;
+            margin: 57px 20px 6px;
+        }
+        &__item {
+            height: 765px;
+            &::before {
+                top: 124px;
+            }
+            &::after {
+                top: 119px;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: 31px;
+                min-width: 400px;
+                margin-left: 60px;
+                margin-right: 0;
+                min-width: 0;
+            }
+            &__sub {
+                margin-left: 60px;
+                margin-right: 0;
+            }
+        &:nth-child(2n+2) {
+
+        .speakers__item__text {
+
+            margin-right: 60px;
+            margin-left: 0;
+        }
+        .speakers__item__sub {
+
+            margin-right: 60px;
+            margin-left: 0;
+        }
+        .speakers_name {
+            padding-right: 0;
+
+            margin-right: 60px;
+            margin-left: 0;
+            }
+          }
+        }
+        &_name {
+            padding-left: 0;
+            margin-left: 60px;
+            margin-right: 0;
+            width: 62%;
+            font-size: 30px;
+            margin-top: 65px;
+        }
+    }
+    .lines {
+        width: 18%;
+        height: 218px;
+        top: -132px;
+    }
+    .dots {
+        width: 19%;
+        height: 295px;
+        top: -125px;
+    }
+    .dots-r, .dots-l {
+        height: 330px;
+    }
+    .online {
+        &__item {
+            &:nth-child(2n+2) {
+                &:before {
+                    left: -20px;
+                }
+                &:after {
+                    left: -7px;
+                }
+            }
+            &:before {
+                width: 42px;
+                height: 42px;
+                right: -22px
+            }
+            &:after {
+                width: 15px;
+                height: 15px;
+                top: 13px;
+                right: -8px;
+            }
+            &__text {
+                font-size: 17px;
+            }
+        }
+    }
+    .cloud {
+        top: -72px;
+        height: 128px;
+        background-size: contain;
+        background-position: 100% 0;
+    }
+    .partners {
+        .container {
+            height: 18vw;
+        }
+    }
+    .registration {
+        margin-top: 154px;
+        &__price {
+            font-size: 40px;
+            .price_old {
+                font-size: 23px;
+            }
+        }
+        &__buttun {
+
+        }
+    }
+    .social {
+        width: 170px;
+        &__item {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .btn {
+        width: 410px;
+        height: 64px;
+        font-size: 27px;
+        line-height: 62px;
+    }
+    .price_old {
+        font-size: 29px;
+    }
+    .info .contacts__phone, .info .contacts__mail {
+        font-size: 21px;
+        line-height: 34px;
+        margin: 36px 0px 36px 51px;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .info label {
+        position: absolute;
+        left: 150px;
+    }
+    .logo {
+        height: 90px;
+    }
+    .banner {
+        &__title {
+            width: 27vw;
+            top: 30vw;
+        }
+        &__date {
+            font-size: 28px;
+        }
+    }
+    .section-title {
+        font-size: 26px;
+    }
+    .video__content {
+        margin-top: 130px;
+    }
+    .about {
+        min-height: 572px;
+        &__description {
+            font-size: 17px;
+            line-height: 27px;
+        }
+        &__img {
+            width: 135px;
+            height: 100px;
+            padding: 0 3px 9px;
+        }
+        &__left__text, &__right__text {
+            font-size: 16px;
+            line-height: 27px;
+            top: 77%;
+        }
+    }
+    .section-subtitle {
+        margin-top: 20px;
+    }
+    .schedule {
+        .container {
+            justify-content: center;
+        }
+        &__col {
+            width: 320px;
+            height: 298px;
+            &:nth-child(1n+3) {
+                height: 328px;
+            }
+        }
+    }
+    .thumbails__item {
+        width: 13px;
+        height: 13px;
+    }
+    .speakers {
+        &__description {
+            font-size: 17px;
+            line-height: 27px;
+        }
+        &__item {
+            height: auto;
+            flex-direction: column;
+            &::before {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+            &:nth-child(2n+2) {
+                height: auto;
+                flex-direction: column;
+                .speakers_name {
+                    padding: 0;
+                    margin: 36px auto;
+                    text-align: center;
+                    font-size: 26px;
+                    width: 100%;
+                }
+                .speakers__item__sub {
+                    margin: 20px auto;
+                    width: 100%;
+                    float: none;
+                }
+                .speakers__item__text {
+                    width: 90%;
+                    margin: 0 auto;
+                    clear: both;
+                    float: none;
+                }
+            }
+            &__left, &__right {
+                width: 100%;
+            }
+            &__left {
+                height: 64vw;
+                background-position: 0 0;
+            }
+            &__text {
+                margin: 0 auto;
+                clear: both;
+                font-size: 16px;
+                line-height: 30px;
+                width: 90%;
+                text-align: left;
+                padding-bottom: 55px;
+                min-width: 150px;
+            }
+            &__sub {
+                margin: 20px auto;
+            }
+        }
+        &_name {
+            padding: 0;
+            margin: 36px auto;
+            text-align: center;
+            font-size: 26px;
+        }
+    }
+    .chance {
+        &__sub {
+            font-size: 12px;
+        }
+    }
+    .partners {
+        .container {
+            min-height: 134px;
+            margin-top: 60px;
+        }
+    }
+    .registration {
+        &__title {
+            font-size: 19px;
+        }
+        &__cost {
+            font-size: 16px;
+        }
+        &__price {
+            font-size: 23px;
+        }
+    }
+    .price_old {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    .btn {
+        min-width: 295px;
+        min-height: 35px;
+        font-size: 19px;
+        line-height: 32px;
+        width: 400px;
+        height: 57px;
+        font-size: 22px;
+        line-height: 53px;
+    }
+    .info .contacts__phone, .info .contacts__mail {
+        font-size: 20px;
+    }
+    .info .form, .info .contacts {
+        padding: 63px 55px;
+    }
+    .info .container {
+        height: 574px;
+    }
+    .pop-up {
+        &__wrap {
+            width: 400px;
+        }
+        .form {
+            position: relative;
+            width: 82%;
+            margin: 40px auto;
+            span {
+                font-size: 16px;
+                margin-top: -76px;
+            }
+            .placeholder {
+                margin-top: -76px;
+            }
+            .input {
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+
+            @-moz-document url-prefix() {
+                .placeholder {
+
+                    margin-top: 0;
+
+                    &_1, &_2, &_3, &_4, &_5, &_6 {
+
+                        margin-top: 0;
+
+                    }
+                }
+            }
+
+
+            &__title {
+                margin: 0 auto;
+                margin-bottom: 85px;
+                width: 100%;
+                font-size: 28px;
+            }
+            .submit {
+                padding: 18px 70px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .phone__title {
+        display: block;
+    }
+    .banner {
+        height: 500px;
+        position: relative;
+        background: linear-gradient(to left , #d60b7c, #a719b7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        svg {
+            display: none;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 65px;
+            width: 379px;
+            margin: 0 auto;
+            height: 154px;
+            background-image: url(../img/hand.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &__subtitle {
+            top: 30px;
+            bottom: 0;
+            width: 195px;
+            height: 50px;
+            left: 15px;
+            right: 0;
+            margin: auto;
+            font-size: 28px;
+        }
+        &__title {
+            left: 0;
+            right: 0;
+            top: 57%;
+            margin: 0 auto;
+            width: 250px;
+            height: 80px;
+        }
+        &__date {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            bottom: 50px;
+            position: relative;
+            top: 426px;
+            left: -38px;
+        }
+    }
+    @-moz-document url-prefix() {
+        .banner__title {
+            top: 61%;
+        }
+    }
+    .section-title {
+        font-size: 23px;
+    }
+    .about {
+        min-height: 657px;
+        &__description {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__col {
+            width: 100%;
+            height: 128px;
+            min-height: 198px;
+        }
+    }
+    .about__left__text, .about__right__text {
+        font-size: 15px;
+        line-height: 18px;
+        top: 162px;
+        width: 100%;
+    }
+
+    .schedule {
+        .container {
+            padding-top: 70px;;
+        }
+    }
+    .schedule__col {
+        width: 280px;
+        height: auto;
+        overflow: visible;
+        &:nth-child(1n+3) {
+            height: auto;
+        }
+        &__date {
+            position: relative;
+            margin-top: 12px;
+        }
+    }
+    .schedule__col__text {
+        font-size: 15px;
+        margin-top: 5px;
+        line-height: 25px;
+    }
+    .speakers__description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .speakers__item__text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .gradient-banner {
+        height: 100px;
+        margin: 100px 0;
+    }
+    .gradient-banner__title, .chance__title {
+        font-size: 13px;
+    }
+    .online .container {
+        margin-top: 100px;
+        height: 500px;
+    }
+    .online__item__text {
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0;
+        height: 60px;
+        text-align: left;
+        line-height: 17px;
+        height: 78px;
+        padding: 11px 0;
+        width: 95%;
+    }
+    .online__item {
+        width: auto;
+        float: none;
+        clear: both;
+        margin-left: 60px;
+        &::before {
+            left: -54px;
+        }
+        &::after {
+            left: -40px;
+        }
+        &:nth-child(2n+2) {
+            float: none;
+            &::before {
+                left: -54px;
+            }
+            &::after {
+                left: -40px;
+            }
+        }
+    }
+    .thumbails__item {
+        width: 11px;
+        height: 11px;
+        margin: 5px 6px;
+    }
+    .dot-lime {
+        left: 26px;
+        height: 620px;
+        top: -17px;
+    }
+    .online__item:nth-child(8) .online__item__text {
+        margin: 0;
+    }
+    .chance {
+        height: 150px;
+    }
+    .chance__sub {
+        text-align: center;
+    }
+    .gradient-banner__title, .chance__title {
+        line-height: 16px;
+    }
+    .dots-r, .dots-l, .cloud, .lines, .foo__dots {
+        display: none;
+    }
+    .registration__title {
+        text-align: center;
+    }
+    .info {
+        .container {
+            flex-direction: column;
+            height: auto;
+            width: 90%;
+            .form, .contacts {
+                width: 100%;
+            }
+        }
+    }
+    .form .name, .form .phone, .form .email, .form .messege {
+        width: 100%;
+    }
+    .contacts__text {
+        line-height: 25px;
+    }
+    .btn {
+        width: 295px;
+        height: 54px;
+        font-size: 19px;
+    }
+    .info .contacts__phone, .info .contacts__mail {
+        font-size: 15px;
+        line-height: 38px;
+    }
+    .pop-up__wrap {
+        width: 300px;
+    }
+    .pop-up .form .submit {
+        padding: 18px 32px;
+    }
+    .registration__price .price_old {
+        margin-right: 18px;
+        font-size: 20px;
+        &::before {
+            top: 10px;
+        }
+    }
+    .info .contacts__phone, .info .contacts__mail {
+        margin: 30px 0px 30px 45px;
+    }
+    .form .name, .form .phone, .form .email, .form .messege {
+        margin-bottom: 29px;
+    }
+    .gradient-banner__title, .chance__title {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:430px) {
+    .banner {
+        height: 450px;
+        &::before {
+            width: 270px;
+        }
+    }
+    .online__item__text {
+        font-size: 14px;
+    }
+
+}
